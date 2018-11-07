@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 
 export class ProductListComponent{
     pageTitle:string = 'Product List';
+    imageWidth:number=50;
+    imageMargin:number=2;
+    imageFlag:boolean=true;
+    btntext:string='hideImage';
+    listFilter:string='Cart';
     products:any=[
         {
             "productid":2,
@@ -29,5 +34,11 @@ export class ProductListComponent{
             "imageUrl":"assets/second.png"
         }
     ];
+
+    toggleImage(){
+      this.imageFlag=!this.imageFlag;
+        
+
+    }
     
 }
